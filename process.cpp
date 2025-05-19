@@ -18,7 +18,7 @@ int main(){
          cout<<"i am child:"<<getpid()<<endl;
        }
        else{
-        //wait(NULL)
+        wait(NULL);
         cout<<"my process pid "<<getpid()<<endl;
         cout<<"my child process pid "<<q<<endl;
          }
