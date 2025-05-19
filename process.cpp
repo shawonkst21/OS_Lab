@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 #include<unistd.h>
 #include<sys/types.h>
+#include<sys/wait.h>
 using namespace std;
 int main(){
     pid_t q;
@@ -12,11 +13,12 @@ int main(){
       }
       
       else if(q==0){
-       
+      sleep(3);
        cout<<"my parent process pid "<<getppid()<<endl;
          cout<<"i am child:"<<getpid()<<endl;
        }
        else{
+        //wait(NULL)
         cout<<"my process pid "<<getpid()<<endl;
         cout<<"my child process pid "<<q<<endl;
          }
